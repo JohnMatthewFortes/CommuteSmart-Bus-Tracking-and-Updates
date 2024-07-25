@@ -11,22 +11,22 @@ class _NotificationsPageState extends State<NotificationsPage> {
   List<Map<String, dynamic>> notifications = [
     {
       'title': 'Bus Alert!',
-      'message': 'Bus Number 1415, current route Nasugbu to Batangas. \n\nLocation: Lemery Highway Calaca. \nArriving in 1 hour and 13 minutes. \n\n\n1 hour and 5 minutes',
+      'message': 'Bus Number 1415, current route Nasugbu to Batangas. \n\nLocation: Lemery Highway Calaca. \nArriving in 1 hour and 13 minutes. \n\n\n1 hour and 5 minutes ago',
       'isExpanded': false,
     },
     {
       'title': 'Bus Alert!',
-      'message': 'Bus Number 1520, current route Nasugbu to Batangas. \n\nLocation: Palico - Balayan Batangas Rd, Bauan, Batangas. \nArriving in 32 minutes. \n\n07/24/2024',
+      'message': 'Bus Number 1520, current route Nasugbu to Batangas. \n\nLocation: Palico - Balayan Batangas Rd, Bauan, Batangas. \nArriving in 32 minutes. \n\n20 minutes ago',
       'isExpanded': false,
     },
     {
       'title': 'Bus Alert!',
-      'message': 'Bus Number 1415, current route Batangas to Nasugbu. \n\nLocation: Palico - Balayan Batangas Rd, Tuy Batangas \nArriving in 25 minutes. \n\n07/19/2024',
+      'message': 'Bus Number 1415, current route Batangas to Nasugbu. \n\nLocation: Palico - Balayan Batangas Rd, Tuy Batangas \nArriving in 25 minutes. \n\n5 hours ago',
       'isExpanded': false,
     },
     {
       'title': 'Bus Alert!',
-      'message': 'Bus Number 1520, current route Batangas to Nasugbu. \n\nLocation: Palico - Nasugbu Highway, Tuy, Batangas \nArriving in 14 minutes. \n\n07/14/2024',
+      'message': 'Bus Number 1520, current route Batangas to Nasugbu. \n\nLocation: Palico - Nasugbu Highway, Tuy, Batangas \nArriving in 14 minutes. \n\n5 hours ago',
       'isExpanded': false,
     },
   ];

@@ -1,29 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_map/flutter_map.dart';
-// import 'package:latlong2/latlong.dart';
-
-// import 'dart:convert';
-// import 'package:http/http.dart' as http;
-
 import 'bus_page/busOne.dart';
 import 'bus_page/busTwo.dart';
 import 'bus_page/busThree.dart';
 import 'bus_page/busFour.dart';
 
-
-// Future<List<LatLng>> fetchRoute(LatLng start, LatLng end) async {
-//   final response = await http.get(Uri.parse(
-//     'https://router.project-osrm.org/route/v1/driving/${start.longitude},${start.latitude};${end.longitude},${end.latitude}?overview=full&geometries=geojson'
-//   ));
-
-//   if (response.statusCode == 200) {
-//     final data = json.decode(response.body);
-//     final List<dynamic> coordinates = data['routes'][0]['geometry']['coordinates'];
-//     return coordinates.map((c) => LatLng(c[1], c[0])).toList();
-//   } else {
-//     throw Exception('Failed to load route');
-//   }
-// }
 
 class BusLocation extends StatefulWidget {
   @override
@@ -31,9 +11,6 @@ class BusLocation extends StatefulWidget {
 }
 
 class _BusRouteState extends State<BusLocation> {
-  // List<LatLng> _route =[];
-  // final MapController _mapController = MapController();
-  // double _currentZoom = 18.0;
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -41,19 +18,7 @@ class _BusRouteState extends State<BusLocation> {
       _selectedIndex = index;
     });
   }
-  // void _zoomIn() {
-  //   setState(() {
-  //     _currentZoom += 1.0;
-  //     _mapController.move(_mapController.center, _currentZoom);
-  //   });
-  // }
 
-  // void _zoomOut() {
-  //   setState(() {
-  //     _currentZoom -= 1.0;
-  //     _mapController.move(_mapController.center, _currentZoom);
-  //   });
-  // }
     final List<Widget> _pages = [
     BusOne(),
     BusTwo(),
@@ -98,11 +63,6 @@ class _BusRouteState extends State<BusLocation> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // CircleAvatar(
-              //   radius: 25,
-              //   backgroundColor: Colors.white,
-              //   child: Icon(Icons.person, size: 25, color: Colors.green),
-              // ),
               SizedBox(height: 30),
               Text(appName, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 color: Colors.white)

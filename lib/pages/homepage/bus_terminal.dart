@@ -79,7 +79,6 @@ class _BusTerminalState extends State<BusTerminal> {
             ListTile(
               title: Text('BUSES',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                // color: Colors.black
                  fontWeight: FontWeight.bold
               )
               ),
@@ -92,7 +91,6 @@ class _BusTerminalState extends State<BusTerminal> {
             ListTile(
               title: Text('TERMINAL',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                // color: Colors.black
                  fontWeight: FontWeight.bold
               )
               ),
@@ -105,7 +103,6 @@ class _BusTerminalState extends State<BusTerminal> {
             ListTile(
               title: Text('NOTIFICATIONS', 
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                // color: Colors.black
                  fontWeight: FontWeight.bold
               )
               ),
@@ -118,13 +115,11 @@ class _BusTerminalState extends State<BusTerminal> {
             ListTile(
               title: Text('LOGOUT', 
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                // color: Colors.black
                  fontWeight: FontWeight.bold
               )
               ),
               leading: Icon(Icons.logout, color: Colors.green, size: 30),
               onTap: () {
-                // Navigator.pop(context);
                 Navigator.pushNamed(context, '/welcome');
               },
             ),

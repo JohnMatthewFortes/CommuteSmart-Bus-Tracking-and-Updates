@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
         textTheme: TextTheme(
           bodyLarge: TextStyle(fontSize: 26, color: Colors.black54),
           bodyMedium: TextStyle(fontSize: 18, color: Colors.black54),
-          bodySmall: TextStyle(fontSize: 14, color:Colors.black54),
+          bodySmall: TextStyle(fontSize: 14, color: Colors.black54),
           headlineLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black54),
           headlineMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54),
           labelLarge: TextStyle(color: Colors.white),
@@ -40,14 +40,37 @@ class MainApp extends StatelessWidget {
         ),
       ),
       initialRoute: '/welcome',
-      routes: {
-        '/welcome': (context) => WelcomePage(),
-        '/signup': (context) => SignupPage(),
-        '/login': (context) => LoginPage(),
-        '/home': (context) => HomePage(),
-        '/bus_location': (context) => BusLocation(),
-        '/terminal': (context) => BusTerminal(),
-        '/notifications': (context) => NotificationsPage(),
+      onGenerateRoute: (RouteSettings settings) {
+        switch (settings.name) {
+          case '/welcome':
+            return _buildRoute(settings, WelcomePage());
+          case '/signup':
+            return _buildRoute(settings, SignupPage());
+          case '/login':
+            return _buildRoute(settings, LoginPage());
+          case '/home':
+            return _buildRoute(settings, HomePage());
+          case '/bus_location':
+            return _buildRoute(settings, BusLocation());
+          case '/terminal':
+            return _buildRoute(settings, BusTerminal());
+          case '/notifications':
+            return _buildRoute(settings, NotificationsPage());
+          default:
+            return null;
+        }
+      },
+    );
+  }
+  PageRouteBuilder _buildRoute(RouteSettings settings, Widget page) {
+    return PageRouteBuilder(
+      settings: settings,
+      pageBuilder: (context, animation, secondaryAnimation) => page,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
       },
     );
   }

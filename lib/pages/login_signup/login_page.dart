@@ -67,8 +67,7 @@ class LoginPage extends StatelessWidget {
                     height: 50,
                     child: OutlinedButton(
                       onPressed: () {
-                        Navigator.pop(context);
-                        // Navigator.pushNamed(context, '/welcome');
+                        Navigator.pushNamed(context, '/welcome');
                       },
                       child: Text('BACK', style: TextStyle(color: Colors.green)),
                       style: ElevatedButton.styleFrom(

@@ -43,24 +43,7 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
         ),
-      // appBar: AppBar(
-      //   toolbarHeight: 250,
-      //   flexibleSpace: Container(
-      //     color: Colors.green,
-      //     child: Column(
-      //       mainAxisAlignment: MainAxisAlignment.center,
-      //       children: [
-      //         CircleAvatar(
-      //           radius: 50,
-      //           backgroundColor: Colors.white,
-      //           child: Icon(Icons.person, size: 50, color: Colors.green),
-      //         ),
-      //         SizedBox(height: 30),
-      //         Text(appName, style: Theme.of(context).textTheme.headlineLarge?.copyWith(color: Colors.white)),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+        
       body: Center(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(10.0),

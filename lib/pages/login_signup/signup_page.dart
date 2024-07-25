@@ -18,7 +18,9 @@ class _SignupPageState extends State<SignupPage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Terms and Conditions'),
+          title: Text('Terms and Conditions',
+          style: Theme.of(context).textTheme.headlineMedium,
+          ),
           content: Text('Below are the terms and conditions of using the application'),
           actions: <Widget>[
             TextButton(
@@ -141,7 +143,6 @@ class _SignupPageState extends State<SignupPage> {
                   child: ElevatedButton(
                     onPressed: _loginButtonActive && _aggreedToTerms 
                     ? () {
-                      // final isValid = _formKey.currentState?.validate() ?? false;
                       if (_formKey.currentState?.validate() ?? false) {
                         Navigator.pushNamed(context, '/home');
                       }
@@ -157,7 +158,6 @@ class _SignupPageState extends State<SignupPage> {
                   child: OutlinedButton(
                     onPressed: () {
                       Navigator.pop(context);
-                      // Navigator.pushNamed(context, '/welcome');
                     },
                     child: Text('BACK', style: TextStyle(color: Colors.green)),
                     style: ElevatedButton.styleFrom(
