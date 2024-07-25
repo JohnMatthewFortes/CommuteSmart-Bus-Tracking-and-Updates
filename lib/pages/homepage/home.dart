@@ -1,27 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'pages/login_signup/welcome_page.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
-
-class LinePainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint = Paint()
-    ..color = Colors.teal
-    ..strokeWidth = 3;
-
-    Offset start = Offset(0, size.height /2);
-    Offset end = Offset(size.width, size.height / 2);
-
-    canvas.drawLine(start, end, paint);
-  }
-
-  @override 
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
-  }
-}
 
 class VerticalLinePainter extends CustomPainter {
   @override
@@ -91,6 +71,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final appName = 'CommuteSmart';
+    var mediaQuery = MediaQuery.of(context);
+    var screenHeight = mediaQuery.size.height;
+    var isLandscape = mediaQuery.orientation == Orientation.landscape;
+    var mapHeight = isLandscape ? screenHeight * 0.4 : screenHeight * 0.5;
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
@@ -100,19 +85,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Container(
-              //   height: 150,
-              //   width: 150,
-              //   padding: EdgeInsets.all(10.0),
-              //   child: Image.asset('assets/images/logo.png',
-              //   // fit: BoxFit.cover,
-              //   ),
-              // ),
-              // CircleAvatar(
-              //   radius: 25,
-              //   backgroundColor: Colors.white,
-              //   child: Icon(Icons.person, size: 25, color: Colors.green),
-              // ),
               SizedBox(height: 30),
               Text(appName, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 color: Colors.white)
@@ -129,9 +101,6 @@ class _HomePageState extends State<HomePage> {
             DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.green[100],
-                // image: AssetImage(
-                //   Image.asset('assets/images/logo1.png')
-                // ),
               ),
               child: Container(
                 padding: EdgeInsets.all(10.0),
@@ -139,18 +108,6 @@ class _HomePageState extends State<HomePage> {
                 fit: BoxFit.cover,
                 ),
               ),
-              
-              // child: Container(
-              //   // padding: EdgeInsets.all(10.0),
-              //   child: Center(
-              //     child: Text('CommuteSmart',
-              //     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              //       color: Colors.white,
-              //       fontSize: 22)
-              //       ),
-                  
-              //   ),
-              // ),
             ),
             ListTile(
                 title: Text('HOME', 
@@ -223,12 +180,11 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: <Widget> [
           Container (
-            height: 350,
+            height: mapHeight,
             margin: EdgeInsets.all(5.0),
             child: GestureDetector(
               behavior: HitTestBehavior.translucent,
               child: Card(
-              // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
                 elevation: 50,
                 shadowColor: Colors.black,
                 child: isLoading
@@ -243,9 +199,6 @@ class _HomePageState extends State<HomePage> {
                 //================      MAPS CONTAINER       ================//
                 //                                                           //
                 //===========================================================//
-                // height: 200,
-                // color: Colors.grey[300],
-                // // child: Icon(Icons.map, size: 50, color: Colors.green),
                 child: FlutterMap(
                   mapController: _mapController,
                   options: MapOptions(
@@ -330,9 +283,6 @@ class _HomePageState extends State<HomePage> {
                   title: Text('Buses in Transit', 
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
                   ),
-                  // subtitle: Text('Buses in Transit',
-                  // style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
-                  // ),
                 ),
               ),
             ),

@@ -42,8 +42,8 @@ class _BusThreeState extends State<BusThree> {
     final end = LatLng(14.072046193391696, 120.6324030734456); // BSC Terminal Nasugbu
     
     final waypoints = [
-    LatLng(13.806982455006827, 120.99595118204698), // Example waypoint
-    LatLng(13.793562618041781, 121.00702334064147), // Another example waypoint
+    LatLng(13.806982455006827, 120.99595118204698),
+    LatLng(13.793562618041781, 121.00702334064147),
     LatLng(13.790145020719772, 121.00762415544891),
     LatLng(13.771118091790147, 121.05083990671746),
     LatLng(13.789335252670947, 121.06267050283068),
@@ -73,10 +73,14 @@ class _BusThreeState extends State<BusThree> {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
+    var screenHeight = mediaQuery.size.height;
+    var isLandscape = mediaQuery.orientation == Orientation.landscape;
+    var mapHeight = isLandscape ? screenHeight * 0.4 : screenHeight * 0.5;
     return ListView(
         children: <Widget> [
           Container(
-            height: 300,
+            height: mapHeight,
             margin: EdgeInsets.all(5.0),
             child: GestureDetector(
               behavior: HitTestBehavior.translucent,
@@ -84,11 +88,10 @@ class _BusThreeState extends State<BusThree> {
                 elevation: 50,
                 shadowColor: Colors.black,
                 child: Container(
-                  // color: Colors.grey,
                   child: FlutterMap(
                     mapController: _mapController,
                     options: MapOptions(
-                      center: LatLng(13.990070798347155, 120.72753873349374), //Palico - Balayan - Batangas Rd, Tuy, Batangas
+                      center: LatLng(13.990070798347155, 120.72753873349374),
                       zoom: _currentZoom,
                       minZoom: 10.0,
                       maxZoom: 18.0,

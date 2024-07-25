@@ -56,8 +56,6 @@ class _BusTwoState extends State<BusTwo> {
     final route = await fetchRoute(start, end, waypoints);
       setState(() {
         _route = route;
-        // _start = start;
-        // _end = end;
       });
   }
 
@@ -77,10 +75,14 @@ class _BusTwoState extends State<BusTwo> {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
+    var screenHeight = mediaQuery.size.height;
+    var isLandscape = mediaQuery.orientation == Orientation.landscape;
+    var mapHeight = isLandscape ? screenHeight * 0.4 : screenHeight * 0.5;
     return ListView(
         children: <Widget> [
           Container(
-            height: 300,
+            height: mapHeight,
             margin: EdgeInsets.all(5.0),
             child: GestureDetector(
               behavior: HitTestBehavior.translucent,
@@ -92,7 +94,7 @@ class _BusTwoState extends State<BusTwo> {
                   child: FlutterMap(
                     mapController: _mapController,
                     options: MapOptions(
-                      center: LatLng(13.828981058374573, 120.99307999297955), //Palico - Balayan - Batangas Rd, Bauan, Batangas
+                      center: LatLng(13.828981058374573, 120.99307999297955),
                       zoom: _currentZoom,
                       minZoom: 10.0,
                       maxZoom: 18.0,

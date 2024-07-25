@@ -31,6 +31,7 @@ class _BusOneState extends State<BusOne>{
   List<LatLng> _route = [];
   final MapController _mapController = MapController();
   double _currentZoom = 18.0;
+  
 
   @override
   void initState() {
@@ -73,10 +74,15 @@ class _BusOneState extends State<BusOne>{
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
+    var screenHeight = mediaQuery.size.height;
+    var isLandscape = mediaQuery.orientation == Orientation.landscape;
+    var mapHeight = isLandscape ? screenHeight * 0.4 : screenHeight * 0.5;
+
     return ListView(
         children: <Widget> [
           Container(
-            height: 350,
+            height: mapHeight,
             margin: EdgeInsets.all(5.0),
             child: GestureDetector(
               behavior: HitTestBehavior.translucent,
