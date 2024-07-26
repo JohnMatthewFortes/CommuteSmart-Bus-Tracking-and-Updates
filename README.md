@@ -4,14 +4,14 @@
 
 ## Introduction
 
-Public transportation systems are a vital transportation component for many commuters and travelers, however, these systems can face several challenges that can impact their efficiency and reliability. Several challenges can be seen in the uncertainty and inconsistencies of arrival and departure times of buses to and from their designated start and endpoints. This uncertainty leads to long waiting periods for arrival that are affected by different factors such as delays due to unpredictable traffic, and weather conditions. Traditional methods of displaying bus schedule systems that display the estimated arrival time of buses often fail in predicting and showing the real-time conditions and data that include delays in arrival due to several factors. The lack of accurate real-time data impedes reliability. It discourages commuters and travelers from taking public transport, showing the importance of having a robust solution that can optimize the public transportation experience.
+    Public transportation systems are a vital transportation component for many commuters and travelers, however, these systems can face several challenges that can impact their efficiency and reliability. Several challenges can be seen in the uncertainty and inconsistencies of arrival and departure times of buses to and from their designated start and endpoints. This uncertainty leads to long waiting periods for arrival that are affected by different factors such as delays due to unpredictable traffic, and weather conditions. Traditional methods of displaying bus schedule systems that display the estimated arrival time of buses often fail in predicting and showing the real-time conditions and data that include delays in arrival due to several factors. The lack of accurate real-time data impedes reliability. It discourages commuters and travelers from taking public transport, showing the importance of having a robust solution that can optimize the public transportation experience.
 
-This application aims to enhance the public transportation experience, specifically bus transportation experiences. Enhancing the transportation experience could encourage the use of transportation services such as buses more than the use of private vehicles in traveling and commuting. This could lead not only to the optimization of transportation experience but also to the optimization of traffic and the provision of a solution to different traffic and transportation problems. The goal of this project is to create a more efficient and reliable public transportation system and experience that meets the needs of daily commuters, occasional travelers, and tourists, thereby encouraging the use of public transportation and contributing to more sustainable urban mobility.
+    This application aims to enhance the public transportation experience, specifically bus transportation experiences. Enhancing the transportation experience could encourage the use of transportation services such as buses more than the use of private vehicles in traveling and commuting. This could lead not only to the optimization of transportation experience but also to the optimization of traffic and the provision of a solution to different traffic and transportation problems. The goal of this project is to create a more efficient and reliable public transportation system and experience that meets the needs of daily commuters, occasional travelers, and tourists, thereby encouraging the use of public transportation and contributing to more sustainable urban mobility.
 
 
 ## Description
 
-Public transportation provides mobility and transportation access to millions of people globally.  Bus transportation is a common means of transportation that many people use and experience. Aside from its affordability, it can accommodate several numbers of people larger than occasional public transport such as taxis and jeepneys. Due to this reason, a lot of people prefer taking buses when traveling into different cities resulting in long lines of passengers waiting in designated pickup points and terminals. 
+    Public transportation provides mobility and transportation access to millions of people globally.  Bus transportation is a common means of transportation that many people use and experience. Aside from its affordability, it can accommodate several numbers of people larger than occasional public transport such as taxis and jeepneys. Due to this reason, a lot of people prefer taking buses when traveling into different cities resulting in long lines of passengers waiting in designated pickup points and terminals. 
 	
 
 
@@ -31,8 +31,7 @@ Public transportation provides mobility and transportation access to millions of
 
 ## Motivation
 
-The app aims to alleviate the challenge of boarding buses by offering real-time information and alerts, ensuring a smoother travel experience. Bus Company that was used as a reference for this project is the BSC - Batman Stareexpress Corp. Nasugbu to Batangas and vice versa.
-
+    The app aims to alleviate the challenge of boarding buses by offering real-time information and alerts, ensuring a smoother travel experience. Bus Company that was used as a reference for this project is the BSC - Batman Stareexpress Corp. Nasugbu to Batangas and vice versa.
 
 ## Technologies Used
 
