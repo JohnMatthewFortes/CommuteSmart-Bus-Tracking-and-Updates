@@ -31,7 +31,7 @@ Public transportation provides mobility and transportation access to millions of
 
 ## Motivation
 
-The app aims to alleviate the challenge of boarding buses by offering real-time information and alerts, ensuring a smoother travel experience. Bus Company that was used as a reference for this project is the BSC - Batman Stareexpress Corp. Nasugbu to Batangas and vice versa.
+The app aims to alleviate the challenge of boarding buses by offering real-time information and alerts, ensuring a smoother travel experience. Bus Company that was used as a reference for this project is the BSC - Batman Starexpress Corp. Nasugbu to Batangas and vice versa.
 
 
 ## Technologies Used
@@ -42,7 +42,7 @@ The app aims to alleviate the challenge of boarding buses by offering real-time 
 - Mapping: Open Street Maps, flutter map library
 - IDE: Visual Studio Code
 
-## SIGNIFICANCE:
+## Significance:
 
 Public transportation provides mobility and transportation access to millions of people, being a primary means of transportation. In particular, bus transportation is favored over other forms of public transportation, such as taxis and jeepneys due to its affordability and capacity. Enhancing the public bus transportation experience can result in shorter waiting times, more efficient route planning, and increased reliability, thus encouraging more people to use public transportation. This can help reduce traffic congestion and contribute to more sustainable urban mobility. Enhancing the bus transportation experience can lead to significant benefits:
 
